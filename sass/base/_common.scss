@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: var(--main-font);
+  font-family: $main-font;
   font-style: normal;
-  color: var(--primary-text-color);
-  background: var(--light-color);
+  color: $primary-text-color;
+  background: $light-color;
 }
 
 .list {
@@ -28,6 +28,11 @@ img {
   font-style: normal;
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .title {
-  color: var(--title-text-color);
+  color: $title-text-color;
 }
