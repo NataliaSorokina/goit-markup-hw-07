@@ -1,37 +1,50 @@
 .social-networks {
   display: flex;
   justify-content: center;
-}
 
-.social-networks-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: $light-color;
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $light-color;
 
-  transition: background-color $duration $timing-function;
-}
+    transition: background-color $duration $timing-function;
 
-.social-networks-link:hover,
-.social-networks-link:focus {
-  background-color: $accent-color;
-}
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
 
-.social-networks-item:not(:last-child) {
-  margin-right: 10px;
-}
-.social-networks-svg {
-  width: 20px;
-  height: 20px;
-  fill: $social-networks-color;
+    .footer & {
+      background-color: rgba(255, 255, 255, 0.1);
 
-  transition: fill $duration $timing-function;
-}
+      transition: background-color $duration $timing-function;
+    }
+  }
 
-.social-networks-link:hover .social-networks-svg,
-.social-networks-link:focus .social-networks-svg {
-  fill: $light-color;
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-svg {
+    width: 20px;
+    height: 20px;
+    fill: $social-networks-color;
+
+    transition: fill $duration $timing-function;
+
+    .social-networks-link:hover &,
+    .social-networks-link:focus & {
+      fill: $light-color;
+    }
+
+    .footer & {
+      width: 20px;
+      height: 20px;
+      fill: $light-color;
+    }
+  }
 }

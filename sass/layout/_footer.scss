@@ -2,28 +2,43 @@
   display: flex;
   height: 252px;
   background-color: $background-color;
+
+  & .container {
+    display: flex;
+  }
+
+  & .address {
+    width: 231px;
+    margin-top: 20px;
+  }
+
+  &-contacts-list {
+    padding: 60px 0px;
+    margin-right: 70px;
+  }
+
+  &-list-item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
-.footer .container {
+/*.footer .container {
   display: flex;
-}
+}*/
 
-.logo-var {
-  color: $light-color;
-}
-
-.footer-contacts-list {
+/*.footer-contacts-list {
   padding: 60px 0px;
   margin-right: 70px;
-}
+}*/
 
-.footer .address {
+/*.footer .address {
   width: 231px;
   margin-top: 20px;
-}
+}*/
 
-.footer-list-item:not(:last-child) {
+/*.footer-list-item:not(:last-child) {
   margin-bottom: 9px;
-}
+}*/
+
 .footer-list-link {
   color: $light-color;
   font-weight: normal;
@@ -32,9 +47,29 @@
   letter-spacing: 0.03em;
 
   transition: color $duration $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &-contact {
+    color: $contacts-color;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    transition: color $duration $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 }
 
-.footer-list-link-contact {
+/*.footer-list-link-contact {
   color: $contacts-color;
   font-weight: normal;
   font-size: 14px;
@@ -42,13 +77,14 @@
   letter-spacing: 0.03em;
 
   transition: color $duration $timing-function;
-}
-.footer-list-link:hover,
+}*/
+
+/*.footer-list-link:hover,
 .footer-list-link:focus,
 .footer-list-link-contact:hover,
 .footer-list-link-contact:focus {
   color: $accent-color;
-}
+}*/
 
 /*====social-networks====*/
 .footer-social-networks {
@@ -64,18 +100,6 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $light-color;
-}
-
-.footer .social-networks-link {
-  background-color: rgba(255, 255, 255, 0.1);
-
-  transition: background-color $duration $timing-function;
-}
-
-.footer .social-networks-svg {
-  width: 20px;
-  height: 20px;
-  fill: $light-color;
 }
 
 .social-networks-link:hover,
